@@ -1,0 +1,45 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <EditText
+            android:id="@+id/nazwa_transakcji"
+            android:inputType="textMultiLine"
+            android:hint="Nazwa transakcji"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/wartosc_transakcji"
+        android:inputType="numberDecimal|numberSigned"
+        android:hint="Wartość transakcji (+/-)"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@+id/nazwa_transakcji"/>
+    <EditText
+        android:id="@+id/data_transakcji"
+        android:inputType="date"
+        android:hint="Data transakcji"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@+id/wartosc_transakcji"/>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/data_transakcji"
+        android:text="Dodaj operację" />
+
+</RelativeLayout>

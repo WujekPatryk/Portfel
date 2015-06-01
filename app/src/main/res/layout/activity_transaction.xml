@@ -1,0 +1,84 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/nazwa_transakcji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/opis_transakcji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nazwa_transakcji"
+        android:singleLine="false"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/datatekst"
+        android:text="Data transakcji: "
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/opis_transakcji"        />
+
+    <TextView
+        android:id="@+id/data_transakcji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:layout_alignTop="@+id/datatekst"
+        android:layout_toRightOf="@+id/datatekst"
+        android:layout_toEndOf="@+id/datatekst"/>
+
+    <TextView
+        android:id="@+id/wartosctekst"
+        android:text="Wartość transakcji: "
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datatekst"
+        />
+
+    <TextView
+        android:id="@+id/wartosc_transakcji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:layout_alignTop="@+id/wartosctekst"
+        android:layout_toRightOf="@+id/wartosctekst"
+        android:layout_toEndOf="@+id/wartosctekst" />
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wartosctekst">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".50"
+            android:text="Dodaj nową transakcję"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".50"
+            android:text="Usuń transakcję"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+</RelativeLayout>

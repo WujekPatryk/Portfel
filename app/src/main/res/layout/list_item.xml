@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip">
+
+    <com.makeramen.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/photo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="10dip"
+        android:scaleType="centerInside"
+        app:riv_oval="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info"
+        android:layout_toRightOf="@+id/photo"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:id="@+id/nazwa_transakcji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="Melanż"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/wartosc_transakcji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="15500,00 zł"
+            android:textSize="16dp"
+            />
+        </LinearLayout>
+    <TextView
+        android:id="@id/data_transakcji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2010-02-02"
+        android:textSize="16dp"
+        android:layout_below="@+id/info"
+        android:layout_toRightOf="@+id/photo"
+        />
+
+</RelativeLayout>
